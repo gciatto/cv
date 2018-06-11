@@ -76,11 +76,12 @@ Address: #1%\centerline{#1}
 
 \def \phone #1{\def \@phone {Phone: #1}}
 \def \skype #1{\def \@skype {Skype: #1}}
+\def \orcid #1{\def \@orcid {ORCiD: #1}}
 \def \birthday #1{\def \@birthday { Birthday: #1}}
 \def \genre #1{\def \@genre { Genre: #1}}
 \def \country #1{\def \@country {Country: #1}}
 \def \email #1{\def \@email {E-mail: #1}}
-\def \www #1{\def \@www {WWW: #1}}
+\def \www #1{\def \@www {Web Page: #1}}
 \def \photo #1{\def \@photo {#1}}
 
 \def \addphoto #1{
@@ -113,7 +114,7 @@ Address: #1%\centerline{#1}
 				\@ifundefined{@addresstwo}{}{% Print the second address if specified
 					\printaddress{\@addresstwo}}
 				\@ifundefined{@addressthree}{}{% Print the third address if specified
-					\printaddress{\@addressthree}}&
+					\printaddress{\@addressthree}}&\myprint{\@orcid}\\&
 				\myprint{\@skype}\\
 				&\myprint{\@www}\\
 			\end{tabular}
